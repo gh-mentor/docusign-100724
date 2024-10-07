@@ -37,10 +37,28 @@ class Department {
         this.employees = this.employees.filter(e => e.getId() !== employee.getId());
     }
 
+    /**
+     * Retrieves the details of the department.
+     * 
+     * @returns {string} A string containing the department ID, name, and the number of employees.
+     */
     getDetails() {
         return `Department ID: ${this.id}, Name: ${this.name}, Employees: ${this.employees.length}`;
     }
 
+
+    /**
+     * Retrieves the list of employees.
+     * 
+     * @returns {Array} An array of employee objects.
+     * 
+     * @example 
+     * // returns [Employee, Employee, Employee]
+     * department.getEmployees();
+     * 
+     * @example
+     * // returns []
+     */
     getEmployees() {
         return this.employees;
     }
